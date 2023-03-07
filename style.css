@@ -3,3 +3,64 @@
     padding:0;
     box-sizing: border-box;
 }
+body{
+    font-size: 20px;
+    color: black;
+    background-color: rgb(132, 175, 175);
+}
+.container{
+    width:100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu-one{
+    width: 60%;
+    background-color: #fff;
+    margin-top: 50px;
+    min-height: 100px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+nav ul li{
+
+}
+
+nav ul li a{
+    text-decoration: none;
+    padding: 5px 20px;
+    color: black;
+    z-index: 2;
+    position: relative;
+    transition: color 0.5s;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color:rgb(132, 175, 175);
+    border-radius: 30px;
+    position: absolute;
+    top: 50%;
+    left:0%;
+    transition: top 0.5s;
+    opacity:0;
+    z-index: -1;
+}
+nav ul li a:hover{
+    color: #fff;
+}
+
+nav ul li a:hover::after{
+    top: 0%;
+    opacity:1;
+}
